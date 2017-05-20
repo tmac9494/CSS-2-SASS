@@ -1,0 +1,73 @@
+
+/***** General ********/
+* {
+	box-sizing: border-box;
+	@include desktop {
+		&:hover {
+			z-index: 1000;
+		}
+	}
+}
+
+body {
+	background: linear-gradient(to top,#333, #eee);
+	@include tablet {
+		background: linear-gradient(to top, #000 -50%, #404472 70%, #77cccc);
+	}
+}
+
+ul {
+	list-style: none;
+	padding-left: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	padding: 5px;
+	@include border(1px,$darkAqua,1.5px);
+	background: white;
+	@extend %box-s;
+	@include desktop {
+		&:not(.profile-pic) {
+			@include visibility(.5);
+		}
+	}
+}
+
+.clearfix {
+	content:"";
+	display: table;
+	clear: both;
+}
+
+.page-title,
+p {
+	@extend %center;
+	margin: 22px auto;
+}
+
+.page-title {
+	@extend %center;
+	@include border(1.7px,$shadowGray,10px);
+	@include font(2.5em);
+	@extend %text-s;
+	border-bottom-right-radius: 0px;
+	border-bottom-left-radius: 0px;
+	color: $aqua;
+	background: $darkGray;
+	padding-bottom: 0;
+	width: 65%;
+	@include tablet {
+		width: 50%;
+		padding: 5px;
+	}
+
+	@include desktop {
+		@include font($fs-large);
+		@include space(12px auto 20px, 5px);
+		width: 100%;
+	}
+}

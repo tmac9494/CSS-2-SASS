@@ -1,0 +1,33 @@
+/***** cols ********/
+
+.col {
+	padding: 1em;
+	background: linear-gradient(#eee,#ccc);
+	border-top: 1px solid $gray;
+	@include tablet {
+	}
+	@include desktop {
+		width: 82%;
+		max-width: 1190px;
+		margin: 0 auto;
+		@include visibility(.6, .8s);
+		&:hover {
+			transform: scale(1.05);
+			box-shadow: 2px 2px 8px rgba(0,0,0,0.3),
+						-2px -2px 8px rgba(0,0,0,0.3);
+			border-radius: 10px;
+			@include visibility(1, .8s);
+		}
+		li {
+			@include visibility(.5);
+		}
+		li:hover {
+			@include visibility(1, .5s);
+			background: $offWhite;
+			padding: 1em;
+		}
+	}
+}
+
+
+/***************************/

@@ -1,0 +1,20 @@
+header {
+	@include tablet {
+		&.banner {width: 100%;}
+		&.banner p {
+			padding: 0 1em 1em;
+			font-size: $medium;
+			text-align: left;
+		}
+	}
+	@include desktop {
+		&.banner {
+			@include visibility(1);
+			width: 82%;
+		}
+		&.banner:hover {
+			transform: none;
+			border-radius: 0px;
+		}
+	}
+}

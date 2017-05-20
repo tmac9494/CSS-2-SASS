@@ -1,0 +1,98 @@
+/***** NAV ********/
+
+.main-nav {
+	li {
+		@include space(7px 0 0 0,8px);
+		font-weight: bold;
+		@extend %center;
+		@include border(1px,$opac-black,6px);
+		background: linear-gradient(to top, #9b9b9b, #dfdfdf);
+		@extend %box-s;
+	}
+	a {
+		color: $black;
+		@extend %block;
+	}
+	.name {
+		background: none;
+		@include font($fs-med,bold);
+		@extend %center;
+	}
+	@include tablet {
+
+		li {
+			display: inline-block;
+			background: none;
+			border-radius: 0px;
+			border: none;
+			box-shadow: none;
+		}
+
+		a {
+			display: block;
+			padding: 5px;
+		}
+
+		.name {
+			@include space(0,8px 0 0 0);
+			display: block;
+			border: none;
+			width: 100%;
+		}
+	}
+
+	@include desktop {
+
+		position: absolute;
+		top: 0;
+		width: 100%;
+		z-index: 1000;
+		box-shadow: 0px 1px 2.5px rgba(0,0,0,0.2);
+		overflow: hidden;
+
+		a:hover {
+			background: rgba(0,0,0,0.22);
+			margin-bottom: -28px;
+		}
+
+		li {
+			@include space(0,0);
+		}
+
+		a {
+			transition: all .7s;
+			border: 1px solid #bcbcbc;
+			border-bottom: none;
+			border-top: none;
+			@include space(0 -3px,12px 8px);
+		}
+
+		.name {
+			@include space(auto,0);
+			float: left;
+			width: 200px;
+		}
+	}
+}
+
+.nav {
+	margin: 1em auto;
+	width: 70%;
+
+	@include tablet {
+		text-align: center;
+		margin: 0 auto;
+	}
+
+	@include desktop {
+		float: right;
+		width: 50%;
+		margin: 0 -44px 0 0;
+	}
+}
+
+@include tablet {
+	.nav-style {
+		background: $white2gray;
+	}
+}

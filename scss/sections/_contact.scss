@@ -1,0 +1,47 @@
+/***** contact ********/
+
+.contact {
+	p {
+		padding: .5em;
+		font-size: $shmedium;
+		@include tablet {
+			font-size: $medium;
+			width: 65%;
+			margin: 0 auto;
+		}
+	}
+	@include desktop {
+		li {
+			@include visibility(1);
+		}
+		li:hover {border-radius: 12px;}
+	}
+}
+
+.contact-details {
+	padding: 1em;
+	border: 1px dotted $gray;
+	border-left: none;
+	border-right: none;
+	li {
+		@extend %center;
+		@include font($normal,bold);
+		margin-top: 1em;
+	}
+	a {
+		color: $darkAqua;
+		&:hover {
+		color: $aqua;
+		}
+	}
+	@include tablet {
+		font-size: $medium;
+		width: 60%;
+		@include space(auto,0 0 25px 0);
+	}
+	@include desktop {
+		width: 50%;
+		margin-bottom: 25px;
+	}
+}
+/***************************/

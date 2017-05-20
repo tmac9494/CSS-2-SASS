@@ -1,0 +1,88 @@
+/***** Experience ********/
+
+.exp-list {
+	li {
+		border-bottom: 1px dotted $gray;
+		padding: 1em;
+	}
+	p {
+		font-size: $normal;
+	}
+	@include tablet {
+		width: 50%;
+		padding: 1em;
+	}
+	@include desktop {
+		@include visibility(.5);
+		&:hover {
+			@include visibility(1);
+			transform: scale(1.04);
+		}
+		p {
+			font-size: $normal;
+		}
+		li {
+			opacity: 1;
+		}
+		li:hover {
+			border-radius: 3.6px;
+		}
+		.mattress:hover {background: $red;}
+		.freelance:hover {background: $darkGray;}
+	}
+}
+
+.exp-title {
+	@extend %text-s;
+	@extend %center;
+	margin-top: 50px;
+	border: none;
+	border-radius: 3px;
+	@include tablet {
+		margin-top: 0px;
+	}
+	@include desktop {
+		font-size: $medium;
+	}
+}
+
+.mattress {
+	background: $red;
+	color: $offWhite;
+	border-radius: 3px;
+}
+
+.freelance {
+	background: $darkGray;
+	color: $yellow;
+	border-radius: 3px;
+}
+
+.mattress p,
+.freelance p {
+	font-size: $normal;
+	@extend %text-s;
+}
+
+@include tablet {
+	.matt {float: left;}
+	.free {float: right;}
+}
+
+.logo {
+	@extend %center;
+	background: none;
+	border: none;
+	width: 45%;
+	display: block;
+	margin: auto;
+	box-shadow: none;
+	@include desktop {
+		&:hover {
+			transform: scale(1.12)
+			rotate(20deg);
+		}
+	}
+}
+
+/***************************/

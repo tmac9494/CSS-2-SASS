@@ -1,0 +1,70 @@
+/***** footer-navs ********/
+
+.footer-name {
+	font-size: $normal;
+	margin-left: 8px;
+	@include tablet {
+		@include space(0 0 0 15px,0);
+		@include font($medium,bold);
+		float: left;
+	}
+}
+.footer-nav {
+	display: none;
+	@include tablet {
+		@include absolute(26%,4%,initial,initial);
+		display: initial;
+		margin: auto;
+		li {
+			display: inline-block;
+			margin: auto;
+			font-weight: bold;
+		}
+		a {
+			color: $black;
+			display: block;
+			padding: 5px;
+		}
+	}
+	@include desktop {
+		margin: 0;
+		margin-right: 42px;
+		li {
+			@include space(0,0);
+		}
+		a {
+			@include space(0,2px 5px);
+			border: none;
+		}
+		a:hover {
+			color: $offWhite;
+			background: $black;
+			border-radius: 16px;
+		}
+	}
+}
+
+.mobile-footer-nav {
+	li{
+		float: right;
+		margin: 5px 8px 0 0;
+		font-weight: bold;
+	}
+	.footer-name {
+		float: left;
+	}
+	a {color: $black;}
+	@include tablet {display: none;}
+}
+
+.main-footer {
+	background: $white2gray;
+	width: 100%;
+	@include border(1px,$lightGray);
+	@include tablet {
+		position: relative;
+	}
+}
+
+
+/***************************/

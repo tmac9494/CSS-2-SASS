@@ -1,0 +1,28 @@
+
+/***** button ********/
+.button {
+	@include font($fs-small,bold);
+	@include border(1.5px,$black,3px);
+	color: $black;
+	@extend %block;
+	width: 80%;
+	padding: 5px;
+	@include tablet {width: 60%;}
+	@include desktop {
+		width: 40%;
+		@include visibility(.5, .5s);
+		&:hover {
+			transform: scale(1.1);
+			@include visibility(1);
+			background: $black;
+			color: $offWhite;
+			border: 1px solid $night;
+			box-shadow: 1px 1px 2px rgba(0,0,0,0.32);
+		}
+		&:active {
+			transform: scale(1);
+			box-shadow: none;
+		}
+	}
+}
+/***************************/

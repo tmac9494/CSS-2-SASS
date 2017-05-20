@@ -1,0 +1,42 @@
+//mix-ins
+
+
+@mixin visibility($opacity,$trans: .5s)  {
+	opacity: $opacity;
+	transition: all $trans;
+}
+
+@mixin absolute($t,$r,$b,$l) {
+	position: absolute;
+	top: $t;
+	right:$r;
+	bottom: $b;
+	left:$l;
+}
+
+@mixin border($px,$color,$radius: 0,$style: solid) {
+	border: $px $style $color;
+	border-radius: $radius;
+}
+
+@mixin font($size,$weight: normal) {
+	font-size: $size;
+	font-weight: $weight;
+}
+
+@mixin space($margin,$padding) {
+	margin: $margin;
+	padding: $padding;
+}
+
+@mixin tablet {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
